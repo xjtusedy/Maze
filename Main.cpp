@@ -1,11 +1,3 @@
-//MAIN.CPP--the user can use the main function to test the class an it' functions
-/*³ÌĞòÃû³Æ:ÃÔ¹¬µÄËæ»úÉú³ÉÓëÃÔ¹¬Â·¾¶²éÕÒ
-  ³ÌĞòÔ­Àí:²»Ïà½»¼¯µÄ¼òµ¥Ó¦ÓÃ
-  ¹¦ÄÜ½éÉÜ:¸ù¾İ²»Ïà½»¼¯Ô­ÀíËæ»úÉú³ÉÃÔ¹¬²¢²éÕÒÆäÂ·¾¶
-           Êä³öÃÔ¹¬µÄÊı×Ö¼°Í¼ÎÄĞÅÏ¢¼°´øÂ·¾¶µÄÍ¼ÎÄĞÅÏ¢(º¬ÎÄ¼ş²Ù×÷)
-
-  Éè¼ÆÊ±¼ä:2010.3.20
-  ²âÊÔÆ½Ì¨:XP/VC++ 6.0¼°ÒÔÉÏ BY ·¨¹Ù*/
 
 #include"maze.h"
 
@@ -39,24 +31,24 @@ int main()
 		cin>>Column;
 		cout<<"Input a File's Name so that you can keep your maze with the file!!"<<endl<<endl;
 		cout<<"FileName:";
-		cin>>File;                               //±ÈÈçÎÄ¼şÃû³Æ"maze.txt"
+		cin>>File;                               //æ¯”å¦‚æ–‡ä»¶åç§°"maze.txt"
 	}
 	cout<<endl<<"Now the computer will Random a Maze with the row and column you input"<<endl;
 	for(i=0;i<30;i++)
 		cout<<"* ";
 	cout<<endl;
 
-//**************Çå¿ÕÎÄ±¾ĞÅÏ¢**************
+//**************æ¸…ç©ºæ–‡æœ¬ä¿¡æ¯**************
 	ClearFile.open(File.c_str());
 	ClearFile.close();
-//**************Çå¿ÕÎÄ±¾ĞÅÏ¢**************
+//**************æ¸…ç©ºæ–‡æœ¬ä¿¡æ¯**************
 
-	Maze maze(Row,Column);                       //³õÊ¼»¯ÃÔ¹¬
-	maze.DisPlay(File);                          //Êä³ö³õÊ¼»¯ÃÔ¹¬ĞÅÏ¢
-	maze.CreateMaze();                           //Ëæ»úÉú³ÉÃÔ¹¬
-	maze.DisPlay(File);                          //Êä³öÃÔ¹¬ĞÅÏ¢
-	maze.FindPath(MazePath);                     //²éÕÒÃÔ¹¬Â·¾¶
-	maze.DisPlay(File,MazePath);                 //Êä³ö´øÂ·¾¶µÄÃÔ¹¬
-	maze.PathMsg(File,MazePath);                  //Êä³öÃÔ¹¬Â·¾¶
+	Maze maze(Row,Column);                       //åˆå§‹åŒ–è¿·å®«
+	maze.DisPlay(File);                          //è¾“å‡ºåˆå§‹åŒ–è¿·å®«ä¿¡æ¯
+	maze.CreateMaze();                           //éšæœºç”Ÿæˆè¿·å®«
+	maze.DisPlay(File);                          //è¾“å‡ºè¿·å®«ä¿¡æ¯
+	maze.FindPath(MazePath);                     //æŸ¥æ‰¾è¿·å®«è·¯å¾„
+	maze.DisPlay(File,MazePath);                 //è¾“å‡ºå¸¦è·¯å¾„çš„è¿·å®«
+	maze.PathMsg(File,MazePath);                  //è¾“å‡ºè¿·å®«è·¯å¾„
 	return 0;
 }
